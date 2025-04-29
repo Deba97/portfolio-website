@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosadeba Joshua Obaseki - Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.4;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      color: #333;
+      font-size: 10pt;
+    }
+    
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 15px;
+    }
+    
+    .profile-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+      border: 2px solid #e2e8f0;
+    }
+    
+    .header-text {
+      flex: 1;
+    }
+    
+    .header h1 {
+      font-weight: 700;
+      font-size: 20pt;
+      margin: 0 0 5px 0;
+      color: #111;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 5px;
+      font-size: 9pt;
+      color: #555;
+    }
+    
+    .section {
+      margin-bottom: 15px;
+    }
+    
+    .section-title {
+      font-weight: 600;
+      font-size: 12pt;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      color: #1a202c;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 4px;
+    }
+    
+    .summary {
+      margin-bottom: 15px;
+    }
+    
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    
+    .skills-item {
+      font-size: 9pt;
+    }
+    
+    .skills-item p {
+      margin: 0;
+    }
+    
+    .experience-item, .project-item {
+      margin-bottom: 12px;
+    }
+    
+    .experience-header, .project-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3px;
+    }
+    
+    .job-title, .project-title {
+      font-weight: 600;
+      font-size: 11pt;
+      color: #2d3748;
+      margin: 0;
+    }
+    
+    .company, .project-date {
+      font-weight: 600;
+      font-size: 10pt;
+      margin: 0;
+    }
+    
+    .date {
+      font-size: 9pt;
+      color: #718096;
+      margin: 0;
+    }
+    
+    .location {
+      font-size: 9pt;
+      color: #718096;
+      margin: 0 0 5px 0;
+    }
+    
+    .description {
+      font-size: 9pt;
+      margin: 5px 0 0 0;
+    }
+    
+    ul {
+      margin: 5px 0;
+      padding-left: 18px;
+    }
+    
+    li {
+      font-size: 9pt;
+      margin-bottom: 3px;
+    }
+    
+    .education-item {
+      margin-bottom: 10px;
+    }
+    
+    .school {
+      font-weight: 600;
+      font-size: 11pt;
+      margin: 0;
+    }
+    
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    
+    @media print {
+      body {
+        padding: 15px;
+      }
+      
+      .page-break {
+        page-break-before: always;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="/images/nosadeba-profile.png" alt="Nosadeba Obaseki" class="profile-photo">
+    <div class="header-text">
+      <h1>Nosadeba Joshua Obaseki</h1>
+      <div class="contact-info">
+        <span>Chicago, IL</span>
+        <span>njobaseki97@gmail.com</span>
+        <span>(773) 791-3116</span>
+        <span>linkedin.com/in/nosadeba-obaseki-225680118</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2 class="section-title">Summary</h2>
+    <div class="summary">
+      <p>Full Stack Developer and Project Manager skilled in JavaScript, React, Node.js, and PostgreSQL. Experienced in leading Agile projects, streamlining operations, and delivering scalable, high-quality software solutions.</p>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-container">
+      <div class="skills-item">
+        <p><strong>Frontend:</strong> JavaScript, React, Vue.js, Next.js, Tailwind CSS, shadcn-ui, Radix UI</p>
+      </div>
+      <div class="skills-item">
+        <p><strong>Backend:</strong> Node.js, Express, FastAPI, PostgreSQL, Supabase, Firebase</p>
+      </div>
+      <div class="skills-item">
+        <p><strong>Tools:</strong> Git, GitHub, Jira, Agile (Scrum, Kanban)</p>
+      </div>
+      <div class="skills-item">
+        <p><strong>Management:</strong> Sprint Planning, Roadmap Creation, Backlog Grooming</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="two-col">
+    <div class="left-col">
+      <div class="section">
+        <h2 class="section-title">Experience</h2>
+        
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="job-title">Project Manager</div>
+            <div class="date">May 2022 – Present</div>
+          </div>
+          <div class="company">Great Paragon Healthcare</div>
+          <div class="location">Chicago, IL</div>
+          <ul>
+            <li>Built a full-stack employee and client management system using Next.js and Supabase with a responsive UI using Tailwind CSS and Shadcn UI, improving onboarding speed by 50%</li>
+            <li>Led end-to-end project planning with Jira, defining timelines, milestones, and deliverables</li>
+            <li>Spearheaded a HIPAA-compliance audit readiness initiative across all branches, preparing all departments for random state surveys, achieving zero audit deficiencies, and securing the Homemaker division's license following a probationary review</li>
+            <li>Procured and deployed 50 iPads for home healthcare division with HIPAA-compliant integrations</li>
+          </ul>
+        </div>
+        
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="job-title">IT Manager</div>
+            <div class="date">June 2019 – April 2022</div>
+          </div>
+          <div class="company">Obaseki and Associates</div>
+          <div class="location">Chicago, IL</div>
+          <ul>
+            <li>Deployed a centralized local server to host Drake Accounting software and client data, connected via ethernet cable to office computers and backed up to a secure hard drive, preserving over 30 years of client data</li>
+            <li>Managed integration of Kaspersky security solutions, achieving a 100% success rate in preventing data breaches across all systems</li>
+            <li>Provided comprehensive technical support by resolving printer issues, scanner configuration, network outages, and regular server maintenance to ensure minimal operational downtime</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="education-item">
+          <div class="school">Bachelor of Science in Computer Science</div>
+          <div class="date">DePaul University • 2021</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="right-col">
+      <div class="section">
+        <h2 class="section-title">Projects</h2>
+        
+        <div class="project-item">
+          <div class="project-header">
+            <div class="project-title">Project Showcase Website</div>
+            <div class="date">April 2025</div>
+          </div>
+          <div class="company">Inflato 3D</div>
+          <ul>
+            <li>Built a responsive website using React, TypeScript, Vite, and Tailwind CSS</li>
+            <li>Integrated interactive 3D model viewing of inflatable products using Three.js</li>
+            <li>Developed a CMS with Supabase for secure content management</li>
+            <li>Created accessible UI components with shadcn-ui and Radix UI</li>
+          </ul>
+        </div>
+        
+        <div class="project-item">
+          <div class="project-header">
+            <div class="project-title">Employee Portal</div>
+            <div class="date">January 2023 - March 2023</div>
+          </div>
+          <div class="company">Great Paragon Healthcare</div>
+          <ul>
+            <li>Architected a comprehensive employee portal with Next.js, Supabase, and Tailwind CSS</li>
+            <li>Implemented dynamic employee listing with advanced filtering options</li>
+            <li>Added features for employee registration and document uploads</li>
+            <li>Integrated automated alerts for document expiration, ensuring compliance</li>
+            <li>Leveraged real-time database features for seamless data synchronization</li>
+            <li>Designed a responsive UI for optimal experience across devices</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 
