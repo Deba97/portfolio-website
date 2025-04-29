@@ -18,23 +18,23 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
           <AnimatedSection direction="left" threshold={0.2}>
             <div className="space-y-6">
-              <div className="space-y-4 text-left sm:text-left">
-                <p className="text-muted-foreground">
+              <div className="space-y-4">
+                <p className="text-muted-foreground text-center sm:text-left">
                   I am a passionate Full-Stack Developer with a love for creating elegant solutions to complex problems. 
                   My journey in programming began with a curiosity about how websites work, and has evolved into a 
                   career building applications that are both beautiful and functional.
                 </p>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-center sm:text-left">
                   I specialize in React, Next.js, and modern frontend technologies, but I'm also comfortable 
                   working across the stack with Node.js, Python, and database technologies. I'm constantly 
                   learning and exploring new technologies to improve my craft.
                 </p>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-center sm:text-left">
                   When I'm not coding, you can find me exploring new hiking trails, reading tech blogs, 
                   or experimenting with new recipes in the kitchen.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4 pt-2 justify-start">
+              <div className="flex flex-wrap gap-4 pt-2 justify-center sm:justify-start">
                 <Button asChild variant="default">
                   <Link href="/resume">View Resume</Link>
                 </Button>
