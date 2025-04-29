@@ -18,15 +18,15 @@ export default function ResumePage() {
       <Navbar />
       <main className="flex-1 pt-28 pb-16">
         <div className="container max-w-4xl mx-auto px-4">
-          <div className={`flex justify-between items-center mb-8 opacity-0 ${isLoaded ? "animate-fadeIn opacity-100" : ""}`}>
-            <h1 className="text-3xl font-bold">Resume</h1>
-            <div className="flex gap-4">
+          <div className={`flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 opacity-0 ${isLoaded ? "animate-fadeIn opacity-100" : ""}`}>
+            <h1 className="text-3xl font-bold mb-2 sm:mb-0">Resume</h1>
+            <div className="flex flex-wrap gap-3 w-full sm:w-auto">
               <Button asChild variant="outline" className="transition-transform hover:scale-105">
-                <a href="/resume-export.html" target="_blank">View Full Resume</a>
+                <a href="/resume-export.html" target="_blank" className="text-sm px-2 sm:px-4">View Full Resume</a>
               </Button>
               <Button className="transition-transform hover:scale-105">
-                <a href="/Nosadeba_Joshua_Obaseki_Resume.pdf" download className="flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <a href="/Nosadeba_Joshua_Obaseki_Resume.pdf" download className="flex items-center gap-1 text-sm px-2 sm:px-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                     <polyline points="7 10 12 15 17 10" />
                     <line x1="12" y1="15" x2="12" y2="3" />

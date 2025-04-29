@@ -18,7 +18,7 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
           <AnimatedSection direction="left" threshold={0.2}>
             <div className="space-y-6">
-              <div className="space-y-4">
+              <div className="space-y-4 text-left sm:text-left">
                 <p className="text-muted-foreground">
                   I am a passionate Full-Stack Developer with a love for creating elegant solutions to complex problems. 
                   My journey in programming began with a curiosity about how websites work, and has evolved into a 
@@ -34,7 +34,7 @@ export function About() {
                   or experimenting with new recipes in the kitchen.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4 pt-2">
+              <div className="flex flex-wrap gap-4 pt-2 justify-start">
                 <Button asChild variant="default">
                   <Link href="/resume">View Resume</Link>
                 </Button>

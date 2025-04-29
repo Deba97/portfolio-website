@@ -16,8 +16,8 @@ export function Contact() {
         </AnimatedHeading>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
-          <AnimatedSection direction="left" threshold={0.2} className="h-full">
-            <Card className="shadow-sm transition-all duration-300 hover:shadow-md h-full">
+          <AnimatedSection direction="left" threshold={0.2} className="h-full w-full mx-auto">
+            <Card className="shadow-sm transition-all duration-300 hover:shadow-md h-full w-full">
               <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
                 <CardDescription>Reach out through any of these channels</CardDescription>
@@ -80,8 +80,8 @@ export function Contact() {
             </Card>
           </AnimatedSection>
           
-          <AnimatedSection direction="right" threshold={0.2} delay={200} className="h-full">
-            <Card className="shadow-sm transition-all duration-300 hover:shadow-md h-full">
+          <AnimatedSection direction="right" threshold={0.2} delay={200} className="h-full w-full mx-auto">
+            <Card className="shadow-sm transition-all duration-300 hover:shadow-md h-full w-full">
               <CardHeader>
                 <CardTitle>Send a Message</CardTitle>
                 <CardDescription>Fill out the form below and I'll get back to you as soon as possible</CardDescription>
