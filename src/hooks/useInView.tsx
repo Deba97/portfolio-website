@@ -10,7 +10,7 @@ interface InViewOptions {
 
 export function useInView<T extends HTMLElement = HTMLElement>(
   options: InViewOptions = {}
-): [RefObject<T>, boolean] {
+): [RefObject<T | null>, boolean] {
   const { threshold = 0.1, rootMargin = '0px', once = false } = options;
   const ref = useRef<T>(null);
   const [isInView, setIsInView] = useState(false);
@@ -42,5 +42,5 @@ export function useInView<T extends HTMLElement = HTMLElement>(
     };
   }, [threshold, rootMargin, once]);
 
-  return [ref, isInView];
+  return [ref as RefObject<T | null>, isInView];
 } 
