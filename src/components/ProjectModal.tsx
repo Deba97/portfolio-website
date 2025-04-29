@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from './ui/dialog';
+import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTitle, DialogDescription } from './ui/dialog';
 import { Button } from './ui/button';
 
 interface ProjectImage {
@@ -34,14 +34,14 @@ export function ProjectModal({ projectId, projectTitle, description, images, isO
   
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-3xl">
+      <DialogContent className="sm:max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-xl">{projectTitle}</DialogTitle>
+          <DialogTitle className="text-xl pr-6">{projectTitle}</DialogTitle>
           <DialogDescription className="mt-2">{description}</DialogDescription>
         </DialogHeader>
         
         <div className="mt-4 relative">
-          <div className="h-[400px] md:h-[500px] bg-muted rounded-md overflow-hidden relative flex items-center justify-center">
+          <div className="h-[300px] sm:h-[400px] md:h-[500px] bg-muted rounded-md overflow-hidden relative flex items-center justify-center">
             {imageError ? (
               <div className="text-center p-4">
                 <p className="text-muted-foreground">Image could not be loaded.</p>
@@ -63,7 +63,7 @@ export function ProjectModal({ projectId, projectTitle, description, images, isO
                 onClick={prevImage} 
                 size="icon" 
                 variant="outline" 
-                className="rounded-full bg-white/80 hover:bg-white"
+                className="rounded-full bg-white/80 hover:bg-white w-9 h-9 sm:w-10 sm:h-10"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="m15 18-6-6 6-6" />
@@ -73,7 +73,7 @@ export function ProjectModal({ projectId, projectTitle, description, images, isO
                 onClick={nextImage} 
                 size="icon" 
                 variant="outline" 
-                className="rounded-full bg-white/80 hover:bg-white"
+                className="rounded-full bg-white/80 hover:bg-white w-9 h-9 sm:w-10 sm:h-10"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="m9 18 6-6-6-6" />
@@ -103,6 +103,10 @@ export function ProjectModal({ projectId, projectTitle, description, images, isO
             </Button>
           ))}
         </div>
+        
+        <DialogClose asChild className="mt-4 block sm:hidden">
+          <Button variant="secondary" className="w-full">Close</Button>
+        </DialogClose>
       </DialogContent>
     </Dialog>
   );
