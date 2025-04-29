@@ -8,6 +8,7 @@ interface AnimatedSectionProps {
   direction?: 'up' | 'down' | 'left' | 'right';
   delay?: number;
   threshold?: number;
+  preserveLayout?: boolean;
 }
 
 export function AnimatedSection({ 
@@ -15,17 +16,18 @@ export function AnimatedSection({
   className = "", 
   direction = 'up',
   delay = 0,
-  threshold = 0.1
+  threshold = 0.1,
+  preserveLayout = false
 }: AnimatedSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   
   // Map directions to transform values - using smaller translations
   const transformMap = {
-    up: 'translate-y-8',
-    down: '-translate-y-8',
-    left: 'translate-x-8',
-    right: '-translate-x-8'
+    up: 'translate-y-6',
+    down: '-translate-y-6',
+    left: 'translate-x-6',
+    right: '-translate-x-6'
   };
   
   useEffect(() => {
@@ -46,6 +48,25 @@ export function AnimatedSection({
       if (section) observer.unobserve(section);
     };
   }, [threshold]);
+  
+  // If preserveLayout is true, we'll use a different approach to animations
+  if (preserveLayout) {
+    return (
+      <div 
+        ref={sectionRef}
+        className={`${className} w-full h-full`}
+      >
+        <div 
+          className={`w-full h-full opacity-0 transition-all duration-700 ease-out ${
+            isVisible ? 'opacity-100' : ''
+          }`}
+          style={{ transitionDelay: `${delay}ms` }}
+        >
+          {children}
+        </div>
+      </div>
+    );
+  }
   
   return (
     <div 
