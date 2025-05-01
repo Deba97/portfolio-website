@@ -34,7 +34,7 @@ const projects: Project[] = [
     detailedDescription: 'Designed and developed a responsive website for Inflato 3D, a custom inflatable design company. The site features interactive 3D model viewing of products, a content management system for easy updates, and a secure customer inquiry system. Built with React, TypeScript, Three.js, and Tailwind CSS.',
     tags: ['React', 'Three.js', 'TypeScript', 'Tailwind CSS'],
     imageUrl: '/images/inflato.png',
-    demoUrl: 'https://jamesapp-9pdmr231r-deba97s-projects.vercel.app',
+    demoUrl: 'https://jamesapp.vercel.app/',
     galleryImages: [
       {
         url: '/images/inflato.png',
