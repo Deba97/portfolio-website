@@ -77,12 +77,6 @@ const projects: Project[] = [
       }
     ]
   },
-  {
-    id: 'project-3',
-    title: 'Future Project',
-    description: 'A placeholder for your third project. This will be filled with actual content once you complete your next project.',
-    tags: ['Coming Soon'],
-  },
 ];
 
 export function Projects() {
